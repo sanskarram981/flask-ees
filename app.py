@@ -33,7 +33,7 @@ def home():
     stud1 = students.query.all()
     return render_template("home.html",stud1=stud1)
 
-@app.route("/delete/<int:sno>",methods=['GET','POST'])
+@app.route("/delete/<int:sno>")
 def delete(sno):
     stud3 = students.query.filter_by(sno=sno).first()
     db.session.delete(stud3)
