@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+    update
+{% endblock title %}
+{% block body %}
+<div class="container-fluid">
+    <h2>Update</h2>
+    <form action="/update/{{studk.sno}}" method="POST">
+        <div class="mb-3">
+          <label for="form-text" class="form-label">FirstName</label>
+          <input type="text" class="form-control"  name="fname" value="{{studk.fname}}" id="form-text" aria-describedby="text">
+        </div>
+        <div class="mb-3">
+            <label for="form-text" class="form-label">LastName</label>
+            <input type="text" class="form-control" name="lname" value="{{studk.lname}}" id="form-text" aria-describedby="text">
+          <div class="mb-3">
+            <label for="form-text" class="form-label">Year</label>
+            <input type="text" class="form-control" name="year" value="{{studk.year}}" id="form-text" aria-describedby="text">
+          </div>
+          <div class="mb-3">
+            <label for="form-text" class="form-label">Password</label>
+            <input type="text" class="form-control" name="password" value="{{studk.password}}" id="form-text" aria-describedby="text">
+            <div id="text" class="form-text">We'll never share your updated passowrd with anyone else.</div>
+          </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+{% endblock body %}
